@@ -24,3 +24,17 @@ code {
 #root {
   height: 100%;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+
+  border-radius: 3px;
+
+  &:focus {
+    border: 1px solid #38a5e1 !important;
+  }
+}
