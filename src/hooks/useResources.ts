@@ -27,12 +27,10 @@ function useResources() {
 
     let target_url: string = url;
 
-    // https://www.youtube.com/watch?v=7txuXlYNR48
     if (url.includes("/watch?v=")) {
       target_url = `https://www.youtube.com/embed/${url.split("/watch?v=")[1]}`;
     }
 
-    // https://youtu.be/7txuXlYNR48?si=Lm3uasv9K4QnJf3P
     if (url.includes("youtu.be/")) {
       target_url = `https://www.youtube.com/embed/${
         url.split("youtu.be/")[1].split("?")[0]
