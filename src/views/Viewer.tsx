@@ -57,6 +57,8 @@ const Header = styled.div`
   gap: 10px;
   padding: 16px;
 
+  background-color: #fff;
+
   z-index: 2;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
 
