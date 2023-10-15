@@ -93,6 +93,7 @@ const ResourceList = () => {
                     <div id="label-area">
                       <span id="label">{resource?.name} </span>
                       <input
+                        defaultValue={resource?.name}
                         ref={nameRef}
                         id={`${resource.key}-name-input`}
                         onBlur={(e) => {
@@ -102,7 +103,6 @@ const ResourceList = () => {
                             e.target.value,
                             (obj) => setViewerTarget(obj)
                           );
-                          e.target.value = "";
                         }}
                         onKeyUp={(e) =>
                           e.key === "Enter" && e.currentTarget.blur()
@@ -228,6 +228,15 @@ const ResourceCard = styled.div<{ active: boolean }>`
     align-items: center;
     justify-content: start;
 
+    word-wrap: break-word !important;
+    word-break: break-all !important;
+
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    overflow: hidden;
+
     & > input {
       width: 0px;
     }
@@ -237,8 +246,8 @@ const ResourceCard = styled.div<{ active: boolean }>`
     width: 100%;
     text-align: start;
 
-    word-wrap: break-word;
-    word-break: break-all;
+    word-wrap: break-word !important;
+    word-break: break-all !important;
 
     display: -webkit-inline-box;
     -webkit-box-orient: vertical;
