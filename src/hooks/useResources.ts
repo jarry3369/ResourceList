@@ -7,38 +7,7 @@ function useResources() {
     isClosable: true,
     position: "bottom-right",
   });
-  const [resources, setResources] = useState<Array<TViewerTarget>>([
-    {
-      key: crypto.randomUUID(),
-      name: "뚠뚠뚠",
-      src: "https://typed.do/blog-kr/how-to-make-good-usability-product/",
-    },
-    {
-      key: crypto.randomUUID(),
-      name: "유튜브 테스트",
-      src: "https://www.youtube.com/embed/yl8wkplCbqg",
-    },
-    {
-      key: crypto.randomUUID(),
-      name: "뚠뚠뚠2",
-      src: "https://typed.do/blog-kr/how-to-make-good-usability-product/",
-    },
-    {
-      key: crypto.randomUUID(),
-      name: "유튜브 테스트2",
-      src: "https://www.youtube.com/embed/yl8wkplCbqg",
-    },
-    {
-      key: crypto.randomUUID(),
-      name: "뚠뚠뚠3",
-      src: "https://typed.do/blog-kr/how-to-make-good-usability-product/",
-    },
-    {
-      key: crypto.randomUUID(),
-      name: "유튜브 테스트3",
-      src: "https://youtu.be/7txuXlYNR48?si=I4scf_VvhmBmT0h3&t=1",
-    },
-  ]);
+  const [resources, setResources] = useState<Array<TViewerTarget>>([]);
 
   function validate() {
     return new Promise((resolve, reject) => {
